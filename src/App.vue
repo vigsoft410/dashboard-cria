@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Login />
   </div>
 </template>add
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Login from './components/Login.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Login
   }
 }
 </script>
@@ -25,4 +24,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+  body{
+        background: url('./assets/Login-background.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
 </style>
