@@ -2,12 +2,17 @@
   "name": "dashboard-cria",
   "version": "0.1.0",
   "private": true,
+  "husky": {
+    "hooks": {}
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.4.0",
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
   },
@@ -18,6 +23,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "husky": "^4.2.1",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
