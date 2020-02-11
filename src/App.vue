@@ -2,7 +2,7 @@
   <div id="app">
     <Login />
   </div>
-</template>add
+</template>
 
 <script>
 import Login from './components/Login.vue'
@@ -24,8 +24,4 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-  body{
-        background: url('./assets/Login-background.jpg') no-repeat center center fixed;
-        background-size: cover;
-    }
 </style>

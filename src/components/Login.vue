@@ -5,8 +5,8 @@
                 <div class="modal-content">
 
                     <form class="col-12">
+                        <img src="./../assets/login-img.svg" class="img-login">
                         <div class="text-center">
-                        <h1 class="title-h1"> Login </h1>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="User Name">
@@ -25,7 +25,13 @@
 
 <script>
 export default {
+    data(){
+        return {
 
+        }
+    },
+    methods:{
+    },
 }
 </script>
 
@@ -43,17 +49,21 @@ export default {
         max-width: 600px;
         
     }
+    #login .img-login {
+        margin-top: -75px;
+        width: 100px;
+    }
     #login .modal-content {
         background-color: #3b3b3be1;
         padding: 0 18px;
-        box-shadow: 0px 0px 25px #202020be;
+        box-shadow: 5px 5px 5px #bfbfbfbe;
         border-radius: 15px;
         border: 0;
     }
     #login .form-control {
-        background-color: #3b3b3be1;
+        /* background-color: #3b3b3be1; */
         border: 1px solid #ffab19;
-        color: #ffbb46;
+        /* color: #ffbb46; */
     }
     #login .form-control:focus {
         box-shadow: 0 0 0 0.1rem #feb04ba2;
