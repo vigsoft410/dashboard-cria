@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Login />
+    <CadastroUsuario />
   </div>
 </template>
 
 <script>
-import Login from './components/Login.vue'
+import CadastroUsuario from './components/Cadastro-usuario.vue'
 
 export default {
   name: 'App',
   components: {
-    Login
+    CadastroUsuario, 
   }
 }
 </script>

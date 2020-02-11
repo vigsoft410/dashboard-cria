@@ -1,7 +1,7 @@
 <template>
     <div id='login' class="app">
         <div class="modal-dialog text-center">
-            <div class="col-sm-8 main-section teste">
+            <div class="col-sm-8 main-section">
                 <div class="modal-content">
 
                     <form class="col-12">
@@ -15,6 +15,7 @@
                             <input type="password" class="form-control" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-warning"> Login </button>
+                        <button type="submit" class="btn btn-warning"> Register </button>
                     </form>
 
                 </div> <!-- End of Modal Content -->
@@ -36,10 +37,6 @@ export default {
 </script>
 
 <style> 
-    #login .title-h1 {
-        color: #ffab19;
-        padding-top: 15px;
-    }
     #login .main-section {
         margin: 0 auto;
         margin-top: 130px;
@@ -54,28 +51,22 @@ export default {
         width: 100px;
     }
     #login .modal-content {
-        background-color: #3b3b3be1;
         padding: 0 18px;
         box-shadow: 5px 5px 5px #bfbfbfbe;
         border-radius: 15px;
-        border: 0;
     }
-    #login .form-control {
-        /* background-color: #3b3b3be1; */
-        border: 1px solid #ffab19;
-        /* color: #ffbb46; */
-    }
-    #login .form-control:focus {
+    .form-control:focus {
         box-shadow: 0 0 0 0.1rem #feb04ba2;
-    }
-    #login .btn-warning {
-        background-color: #ffab19;
-        border-color: #ffab19d3;
     }
     #login .form-group {
         margin-top: 18px;
     }
-    #login .btn {
+    .btn-warning {
+        background-color: #ffab19;
+        border-color: #ffab19d3;
+    }
+    .btn {
         margin-bottom: 25px;
+        margin-right: 18px;
     }
 </style>
