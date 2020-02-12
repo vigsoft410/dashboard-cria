@@ -55,17 +55,18 @@ export default {
         box-shadow: 5px 5px 5px #bfbfbfbe;
         border-radius: 15px;
     }
-    .form-control:focus {
+    #login .form-control:focus {
         box-shadow: 0 0 0 0.1rem #feb04ba2;
+        border-color: #feb04ba2;
     }
     #login .form-group {
         margin-top: 18px;
     }
-    .btn-warning {
+    #login .btn-warning {
         background-color: #ffab19;
         border-color: #ffab19d3;
     }
-    .btn {
+    #login .btn {
         margin-bottom: 25px;
         margin-right: 18px;
     }
