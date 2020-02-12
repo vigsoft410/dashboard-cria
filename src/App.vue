@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <Login />
-    <CadastroUsuario />
+    <router-view />
   </div>
 </template>
 
 <script>
-import CadastroUsuario from './components/Cadastro-usuario.vue'
-import Login from './components/Login.vue'
 
 export default {
   name: 'App',
   components: {
-    CadastroUsuario, Login 
+     
   }
 }
 </script>

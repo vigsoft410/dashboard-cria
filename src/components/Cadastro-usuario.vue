@@ -41,7 +41,7 @@
                 <b-row class="button justify-content-end">
                     <b-col class="col-4 ">
                         <b-button class="accept btn btn-warning">Prosseguir</b-button>
-                        <b-button class="cancel btn btn-warning">Cancelar</b-button>
+                        <b-button class="cancel btn btn-warning"><router-link to="/">Cancelar</router-link></b-button>
                     </b-col>
                 </b-row>
             </b-container>

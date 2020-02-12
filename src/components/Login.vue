@@ -15,7 +15,7 @@
                             <input type="password" class="form-control" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-warning"> Login </button>
-                        <button type="submit" class="btn btn-warning"> Register </button>
+                        <button type="submit" class="btn btn-warning"><router-link to="/cadastro"> Register </router-link></button>
                     </form>
 
                 </div> <!-- End of Modal Content -->
