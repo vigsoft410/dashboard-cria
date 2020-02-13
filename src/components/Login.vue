@@ -9,13 +9,13 @@
                         <div class="text-center">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="User Name">
+                            <input type="text" v-model="userName" class="form-control" placeholder="Nome de Usuário">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" v-model="password" class="form-control" placeholder="Senha">
                         </div>
-                        <button type="submit" class="btn btn-warning"> Login </button>
-                        <button type="submit" class="btn btn-warning"><router-link to="/cadastro"> Register </router-link></button>
+                        <button type="button" class="btn" @click="Login"> Login </button>
+                        <button type="button" class="btn" @click="Cadastro" > Register</button>
                     </form>
 
                 </div> <!-- End of Modal Content -->
@@ -25,13 +25,27 @@
 </template>
 
 <script>
+import router from '../router.js'
 export default {
     data(){
         return {
-
+            userName: '',
+            password: '',
         }
     },
     methods:{
+        Login() {
+            if (this.userName && this.password === "admin"){
+                console.log('Login aceito!')
+                router.push('/cadastro')
+            }
+            else {
+                console.log('Login não aceito.')
+            }
+        },
+        Cadastro() {
+            router.push('/cadastro')           
+        }
     },
 }
 </script>
@@ -62,7 +76,7 @@ export default {
     #login .form-group {
         margin-top: 18px;
     }
-    #login .btn-warning {
+    #login .btn {
         background-color: #ffab19;
         border-color: #ffab19d3;
     }
