@@ -12,7 +12,7 @@
                             <input type="text" v-model="userName" class="form-control" placeholder="Nome de Usuário">
                         </div>
                         <div class="form-group">
-                            <input type="password" v-model="password" class="form-control" placeholder="Senha">
+                            <input type="password" v-model="password" class="form-control" placeholder="Senha"  @keyup.enter="Login">
                         </div>
                         <button type="button" class="btn" @click="Login"> Login </button>
                         <button type="button" class="btn" @click="Cadastro" > Register</button>
@@ -37,10 +37,11 @@ export default {
         Login() {
             if (this.userName && this.password === "admin"){
                 console.log('Login aceito!')
-                router.push('/cadastro')
+                router.push('/lista')
             }
             else {
                 console.log('Login não aceito.')
+                alert('Oops... algo está errado')
             }
         },
         Cadastro() {
@@ -79,8 +80,6 @@ export default {
     #login .btn {
         background-color: #ffab19;
         border-color: #ffab19d3;
-    }
-    #login .btn {
         margin-bottom: 25px;
         margin-right: 18px;
     }
