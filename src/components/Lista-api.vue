@@ -1,37 +1,36 @@
 <template>
-    <div class="container">
-            <div class="card-container text-center">
-                <div class="card-content ">
-                    <h3><strong>01</strong></h3>
-                    <h4>Lorem Ipsum</h4>
-                    <span>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Labore et sit quae exercitationem cumque at provident eius beatae consequatur architecto? 
-                        Accusantium, dicta!</p>
-                    </span>
-                    <a> Ler mais </a>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-12" v-for="item in items" :key="item.title">
+                <div class="card-container text-center">
+                    <div class="card-content ">
+                        <h3><strong>{{item.userId}}</strong></h3>
+                        <h4>{{item.title}}</h4>
+                        <span>
+                        <p>{{item.body}}</p>
+                        </span>
+                        <a> Ler mais </a>
+                    </div>
                 </div>
             </div>
-    </div> 
-        <!-- <div class="row">
-            <div class="col-sm" v-for="item in items" :key="item.title">
-                <b-card 
-                :title="item.title"
-                img-src="https://picsum.photos/600/300/?image=25"
-                img-alt="image"
-                img-top
-                tag="article"
-                style="max-width: 18rem;"
-                class="mb-2"
-                >
-                    <b-card-text><strong> ID: </strong>{{item.userId}},
-                    <p><strong> Completed: </strong>{{item.body}}</p>
-                    </b-card-text>
-                    <b-button variant="warning" @click="startEvent">Action</b-button>
-                </b-card>
+        </div>
+    </div>  -->
+        <div class="row">
+            <div class="col-2" v-for="item in items" :key="item.title">
+                <div class="card-container text-center">
+                    <div class="card-content">
+                        <a v-b-toggle="'collapse-1'"> Leia Mais </a>
+                        <div class="card-body">
+                            <h3><strong>{{item.userId}}</strong></h3>
+                            <h4>{{item.title}}</h4>
+                            <b-collapse id="collapse-1">
+                            <p>{{item.body}}</p>
+                            </b-collapse>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div> -->
+        </div>
  </template>
 
 <script>
@@ -66,6 +65,9 @@ export default {
         height: 400px;
         background-color: #fff;
     }
+    .card-container {
+        margin: 5px;
+    }
     .card-content:hover h3 {
         padding-top: 0; 
     }
@@ -75,29 +77,32 @@ export default {
         font-size: 150px;
         color: rgba(242, 116, 5, 0.267);
         position: absolute;
-        padding-left: 130px;
+        padding-left: 90px;
         padding-top: 40px;
         transition: 0.4s;
     }
     h4 {
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
-        font-size: 28px;
-        padding-top: 90px;
+        font-size: 20px;
+        padding-top: 20px;
         padding-left: 10px;
         text-align: start;
         color: #F27405;
     }
     p {
         font-family: 'Poppins', sans-serif;
+        font-size: 15px;
         padding-left: 10px;
         text-align: start;
         padding: 10px;
         color: #025E73;
     }
 
-    .card-content a {
-        position: relative;
+    .card-container a {
+        position: absolute;
+        margin-top: 330px;
+        margin-left: -45px;
         padding: 10px;
         border: 1px solid #F27405;
         color: #F27405;
@@ -107,11 +112,11 @@ export default {
         visibility: hidden;
         opacity: 0;
     }
-    .card-content a:hover {
+    .card-container a:hover {
         background: #F27405;
         color: #fff;
     }
-    .card-content:hover a{
+    .card-container:hover a{
         visibility: visible;
         opacity: 1;
     }
