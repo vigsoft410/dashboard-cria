@@ -1,20 +1,4 @@
 <template>
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-12" v-for="item in items" :key="item.title">
-                <div class="card-container text-center">
-                    <div class="card-content ">
-                        <h3><strong>{{item.userId}}</strong></h3>
-                        <h4>{{item.title}}</h4>
-                        <span>
-                        <p>{{item.body}}</p>
-                        </span>
-                        <a> Ler mais </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  -->
         <div class="row">
             <div class="col-2" v-for="item in items" :key="item.title">
                 <div class="card-container text-center">
