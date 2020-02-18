@@ -1,9 +1,12 @@
 const axios = require('axios');
 
 const ApiService = {
-    getTodos() {
-        return axios.get('https://jsonplaceholder.typicode.com/todos/1');
+    getPosts() {
+        return axios.get('https://jsonplaceholder.typicode.com/posts');
     },
+    getPhotos() {
+        return axios.get('https://jsonplaceholder.typicode.com/posts')
+    }
 }
 
 export default ApiService;
