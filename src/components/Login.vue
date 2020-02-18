@@ -4,7 +4,7 @@
             <div class=" main-section">
                 <div class="modal-content">
                     <form class="col-12 text-align-start">
-                        <img src="./../assets/login-img.svg" class="img-login">
+                        <img src="./../assets/cadastro-img.png" class="img-login">
                         <b-form-group
                         id="fieldset-1"
                         label="Coloque seu email ou nome de usuário"
@@ -78,8 +78,7 @@ export default {
         
     }
     #login .img-login {
-        margin-top: -75px;
-        width: 100px;
+        width: 250px;
     }
     #login .modal-content {
         padding: 0 18px;

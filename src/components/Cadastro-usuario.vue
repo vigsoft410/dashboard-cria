@@ -3,12 +3,12 @@
         <div class="master">
             <b-container class="main-container">
                 <form class="col-12 text-align-start">
-                    <img src="./../assets/cadastro-img.svg" class="img-cadastro">
+                    <img src="./../assets/cadastro-img.png" class="img-cadastro">
                     <b-row class="name">
                         <b-col class="col-8">
                                 <b-form-group
                                 id="fieldset-1"
-                                label="Nome completo"
+                                label="Nome de usuário"
                                 class="form-top"
                                 >
                                     <b-form-input class="form-control"></b-form-input>
@@ -79,8 +79,7 @@
         width: 100%;
     }
     .img-cadastro {
-        margin-top: -40px;
-        width: 150px;
+        width: 250px;
     }
     .btn-warning {
         background-color: #ffab19;
@@ -109,9 +108,6 @@
     .label {
         color: #495057;
         padding-left: 12px;
-    }
-    .name {
-        margin-top: 10px;
     }
     .cancel {
         margin-bottom: 25px;
