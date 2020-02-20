@@ -1,13 +1,13 @@
 <template>
         <div class="row">
-            <div class="col-2" v-for="item in items" :key="item.title">
+            <div class="col-2" v-for="(item, index) in items" :key="item.title">
                 <div class="card-container text-center">
                     <div class="card-content">
-                        <a v-b-toggle="'collapse-1'"> Leia Mais </a>
+                        <a v-b-toggle="'collapse-'+ index"> Leia Mais </a>
                         <div class="card-body">
                             <h3><strong>{{item.userId}}</strong></h3>
                             <h4>{{item.title}}</h4>
-                            <b-collapse id="collapse-1">
+                            <b-collapse :id="'collapse-'+ index">
                             <p>{{item.body}}</p>
                             </b-collapse>
                         </div>

@@ -1,4 +1,4 @@
-import '@mdi/font/scss/materialdesignicons.scss';
+import '@mdi/font/scss/materialdesignicons.scss'
 import Vue from 'vue'
 import App from './App.vue'
 import axios from 'axios'

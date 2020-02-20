@@ -1,63 +1,59 @@
 <template>
     <div id="cadastro" class="app">
-        <div class="master">
-            <b-container class="main-container">
-                <form class="col-12 text-align-start">
-                    <img src="./../assets/cadastro-img.png" class="img-cadastro">
-                    <b-row class="name">
-                        <b-col class="col-8">
+        <div class="modal-dialog text-center">
+            <div class="main-section">
+                <div class="modal-content">
+                    <form class="col-12">
+                        <img src="./../assets/cadastro-img.png" class="img-cadastro">
+                            <div class="row">
+                                <div class="col-6">
                                 <b-form-group
                                 id="fieldset-1"
-                                label="Nome de usuário"
-                                class="form-top"
+                                label="Nome"
+                                class="form-group"
                                 >
                                     <b-form-input class="form-control"></b-form-input>
                                 </b-form-group>
-                        </b-col>  
-                    <b-col class="col-4">
+                                </div>
+                                 <div class="col-6">
                                 <b-form-group
-                                id="fieldset-2"
-                                label="Idade"
-                                class="form-top"
-                                >
-                                    <b-form-input class="form-control" type="number"></b-form-input>
-                            </b-form-group>
-                        </b-col>
-                    </b-row>
-                    <b-row class="email">
-                        <b-col class="col-12">
-                            <b-form-group
-                                id="fieldset-3"
-                                label="E-mail"
+                                id="fieldset-1"
+                                label="Sobrenome"
+                                class="form-group"
                                 >
                                     <b-form-input class="form-control"></b-form-input>
-                            </b-form-group>
-                        </b-col>
-                    </b-row>
-                    <b-row class="senha">
-                        <b-col class="col-6">
-                            <b-form-group
+                                </b-form-group>
+                                </div>
+                            </div>
+                                <b-form-group
+                                id="fieldset-3"
+                                label="E-mail"
+                                class="form-group"
+                                >
+                                    <b-form-input class="form-control"></b-form-input>
+                                </b-form-group>
+    
+                                <b-form-group
                                 id="fieldset-4"
                                 label="Senha"
+                                class="form-group"
                                 >
                                     <b-form-input class="form-control" type="password"></b-form-input>
-                            </b-form-group>
-                        </b-col>
-                        <b-col class="col-6">
-                            <b-form-group
-                                id="fieldset-4"
-                                label="Confirme a senha"
-                                >
-                                    <b-form-input class="form-control" type="password"></b-form-input>
-                            </b-form-group>
-                        </b-col>
-                    </b-row>
-                    <b-row class="button justify-content-center">
-                            <b-button class="accept btn btn-warning">Prosseguir</b-button>
-                            <b-button class="cancel btn btn-warning" @click="LoginRouter">Cancelar</b-button>
-                    </b-row>
-                </form>
-            </b-container>
+                                </b-form-group>
+                                <b-form-group
+                                    id="fieldset-4"
+                                    label="Confirme a senha"
+                                    class="form-group"
+                                    >
+                                        <b-form-input class="form-control" type="password"></b-form-input>
+                                </b-form-group>
+                        <b-row class="button justify-content-center">
+                                <b-button class="accept btn btn-warning">Prosseguir</b-button>
+                                <b-button class="cancel btn btn-warning" @click="LoginRouter">Cancelar</b-button>
+                        </b-row>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -74,6 +70,15 @@
 </script>
 
 <style scoped>
+    .modal-dialog{
+        max-width: 400px;
+        
+    }
+    .main-section {
+        margin: 0 auto;
+        margin-top: 100px;
+        padding: 0;
+    }
     .btn {
         margin-bottom: 18px;
         width: 100%;
@@ -85,29 +90,25 @@
         background-color: #ffab19;
         border-color: #ffab19d3;
     }
+
     .form-control:focus {
         box-shadow: 0 0 0 0.1rem #F27405;
         border-color: rgb(224, 114, 18);
     }
-    .form-group label {
-        margin-top: 10px;
+    .form-group {
+        margin-top: 1px;
         margin-left: -8px;
         text-align: left;
         font-size: 15px;
         color: #8896a3;
         padding-left: 10px;
-    }
-    .main-container {
-        max-width: 400px;
-        background-color: #ffffff;
-    }
-    .form-group {
         text-align: left;
-        
     }
-    .label {
-        color: #495057;
-        padding-left: 12px;
+    .modal-content {
+        background-color: #ffffff;
+        border: 0;
+        border-radius:0;
+        padding: 0 18px;
     }
     .cancel {
         margin-bottom: 25px;

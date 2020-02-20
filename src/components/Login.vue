@@ -1,9 +1,9 @@
 <template>
     <div id='login' class="app">
         <div class="modal-dialog text-center">
-            <div class=" main-section">
+            <div class="main-section">
                 <div class="modal-content">
-                    <form class="col-12 text-align-start">
+                    <form class="col-12">
                         <img src="./../assets/cadastro-img.png" class="img-login">
                         <b-form-group
                         id="fieldset-1"
@@ -46,6 +46,8 @@ export default {
         return {
             userName: '',
             password: '',
+            login: false,
+            cadastro: false,
         }
     },
     methods:{
@@ -53,6 +55,7 @@ export default {
             if (this.userName && this.password === "admin"){
                 console.log('Login aceito!')
                 router.push('/lista')
+                this.login = true
             }
             else {
                 console.log('Login não aceito.')
@@ -60,7 +63,8 @@ export default {
             }
         },
         Cadastro() {
-            router.push('/cadastro')           
+            router.push('/cadastro')
+            this.cadastro = true           
         }
     },
 }
