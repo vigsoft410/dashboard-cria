@@ -37,7 +37,8 @@
 
 <script>
 import router from '../router.js'
-import LoginFactory from '../factories/login.factory'
+// import LoginFactory from '../factories/login.factory'
+import firebase from 'firebase'
 export default {
     components: {
     },
@@ -45,30 +46,20 @@ export default {
         return {
             userName: '',
             password: '',
-            login: false,
-            cadastro: false,
         }
     },
     methods:{
         Login() {
-            LoginFactory.login().then((response)=> {
-                // eslint-disable-next-line no-debugger
-                debugger;
-                console.log(response);
-            });
-            if (this.userName && this.password === "admin"){
-                console.log('Login aceito!')
+            firebase.auth().signInWithEmailAndPassword(this.userName, this.password).then((user) => {
                 router.push('/lista')
-                this.login = true
-            }
-            else {
-                console.log('Login não aceito.')
-                alert('Oops... algo está errado')
-            }
+                console.log(user)
+                },
+                (err) => {
+                    alert('Deu errado meu parça: ' + err.message)    
+                });
         },
         Cadastro() {
-            router.push('/cadastro')
-            this.cadastro = true           
+            router.push('/cadastro')         
         }
     },
 }

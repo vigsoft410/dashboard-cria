@@ -10,7 +10,10 @@ export default new Router({
     mode: 'history',
     routes: [{
         path: '/lista',
-        component: ListaApi
+        component: ListaApi,
+        meta: {
+            requeresAuth: true
+        }
     },
     {
         path: '/',
@@ -19,5 +22,9 @@ export default new Router({
     {
         path: '/cadastro', 
         component: Cadastro
-    },]
+    },
+    {
+        path: '*',
+        component: Login
+    }]
 })

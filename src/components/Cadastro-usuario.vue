@@ -56,14 +56,17 @@
 
 <script>
     import router from '../router'
+    import firebase from 'firebase'
     export default {
         data() {
            return {
                usuario: {
-                   nome:'',
-                   sobrenome: '',
                    email: '',
                    senha: '',
+               },
+               pessoa: {
+                   nome:'',
+                   sobrenome: '',
                }
            }
         },
@@ -72,10 +75,16 @@
                 router.push('/')
             },
             Salvar() {
-                this.$http.post('usuarios.json', this.usuario)
-                    .then(res => {
-                        console.log((res))
-                    })
+                firebase.auth().createUserWithEmailAndPassword(this.usuario.email, this.usuario.senha).then((user) => {
+                    router.push('/')
+                    console.log(user)
+                },
+                (err) => {
+                    alert('Oops...aconteceu alguma coisa.' + err.message)
+                });
+                this.$http('usuario.json', this.pessoa).then((resp) => {
+                    console.log(resp, this.pessoa)
+                })
             },
         },
     }

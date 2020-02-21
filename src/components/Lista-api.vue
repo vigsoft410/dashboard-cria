@@ -31,6 +31,7 @@ export default {
     mounted() {
         ApiService.getPosts().then((response)=> {
             this.items = response.data;
+            console.log(response)
         });
     },
     methods: {
