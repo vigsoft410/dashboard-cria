@@ -9,9 +9,9 @@
       </b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item @click="startEvent" to="/">Login</b-nav-item>
-          <b-nav-item @click="startEvent" to="/cadastro">Cadastro</b-nav-item>
-          <b-nav-item @click="startEvent" to="/lista">Card</b-nav-item>
+          <b-nav-item to="/">Login</b-nav-item>
+          <b-nav-item to="/cadastro">Cadastro</b-nav-item>
+          <b-nav-item to="/lista">Card</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -22,7 +22,7 @@
 <script>
 export default {
   name: 'App',
-  components: {
+  components: { 
      
   },
 }

@@ -37,11 +37,10 @@
 
 <script>
 import router from '../router.js'
-import eye from 'mdi-vue/Eye'
+import LoginFactory from '../factories/login.factory'
 export default {
-    components: [
-        eye,
-    ],
+    components: {
+    },
     data(){
         return {
             userName: '',
@@ -52,6 +51,11 @@ export default {
     },
     methods:{
         Login() {
+            LoginFactory.login().then((response)=> {
+                // eslint-disable-next-line no-debugger
+                debugger;
+                console.log(response);
+            });
             if (this.userName && this.password === "admin"){
                 console.log('Login aceito!')
                 router.push('/lista')

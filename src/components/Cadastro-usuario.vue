@@ -8,47 +8,43 @@
                             <div class="row">
                                 <div class="col-6">
                                 <b-form-group
-                                id="fieldset-1"
                                 label="Nome"
                                 class="form-group"
                                 >
-                                    <b-form-input class="form-control"></b-form-input>
+                                    <b-form-input class="form-control" v-model="usuario.nome"></b-form-input>
                                 </b-form-group>
                                 </div>
                                  <div class="col-6">
                                 <b-form-group
-                                id="fieldset-1"
                                 label="Sobrenome"
                                 class="form-group"
                                 >
-                                    <b-form-input class="form-control"></b-form-input>
+                                    <b-form-input class="form-control" v-model="usuario.sobrenome"></b-form-input>
                                 </b-form-group>
                                 </div>
                             </div>
                                 <b-form-group
-                                id="fieldset-3"
                                 label="E-mail"
                                 class="form-group"
                                 >
-                                    <b-form-input class="form-control"></b-form-input>
+                                    <b-form-input class="form-control" v-model="usuario.email"></b-form-input>
                                 </b-form-group>
     
                                 <b-form-group
-                                id="fieldset-4"
                                 label="Senha"
                                 class="form-group"
                                 >
-                                    <b-form-input class="form-control" type="password"></b-form-input>
+                                    <b-form-input class="form-control" type="password" v-model="usuario.senha"></b-form-input>
                                 </b-form-group>
                                 <b-form-group
-                                    id="fieldset-4"
+
                                     label="Confirme a senha"
                                     class="form-group"
                                     >
                                         <b-form-input class="form-control" type="password"></b-form-input>
                                 </b-form-group>
                         <b-row class="button justify-content-center">
-                                <b-button class="accept btn btn-warning">Prosseguir</b-button>
+                                <b-button class="accept btn btn-warning" @click="Salvar">Prosseguir</b-button>
                                 <b-button class="cancel btn btn-warning" @click="LoginRouter">Cancelar</b-button>
                         </b-row>
                     </form>
@@ -61,11 +57,27 @@
 <script>
     import router from '../router'
     export default {
+        data() {
+           return {
+               usuario: {
+                   nome:'',
+                   sobrenome: '',
+                   email: '',
+                   senha: '',
+               }
+           }
+        },
         methods: {
             LoginRouter() {
                 router.push('/')
-            }
-        }
+            },
+            Salvar() {
+                this.$http.post('usuarios.json', this.usuario)
+                    .then(res => {
+                        console.log((res))
+                    })
+            },
+        },
     }
 </script>
 
